@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+        <record id="navachaitanya_hospital_sale_view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <field name="name"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']//tree/field[@name='price_unit']" position="after">
+                <field name="name"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_style_tree" model="ir.ui.view">
+    <field name="name">product.style.tree</field>
+    <field name="model">product.style</field>
+    <field name="arch" type="xml">
+        <tree editable="top">
+            <field name="name"/>
+            <field name="code"/>
+        </tree>
+    </field>
+    </record>
+
+
+    <record id="action_product_style" model="ir.actions.act_window">
+        <field name="name">products</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.style</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <menuitem id="menu_product_style"
+              name="Product Style"
+              action="action_product_style"
+              parent="sale.product_menu_catalog"/>
+
+
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+swapnil_medical.access_medical_patient,access_Medical_Patient,swapnil_medical.model_medical_patient,base.group_user,1,1,1,1
+swapnil_medical.access_medical_doctors,access_Medical_Doctors,swapnil_medical.model_medical_doctors,base.group_user,1,1,1,1
+swapnil_medical.access_product_style,access_product_style,swapnil_medical.model_product_style,,1,1,1,1
+swapnil_medical.access_business_category,access_business_category,swapnil_medical.model_business_category,,1,1,1,1
+swapnil_medical.access_branch_product_data,access_branch_product_data,swapnil_medical.model_branch_product_data,,1,1,1,1

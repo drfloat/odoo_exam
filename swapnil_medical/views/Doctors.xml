@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_medical_doctors_form">
+        <field name="name">medical.doctors.form</field>
+        <field name="model">medical.doctors</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="gender"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_medical_doctors_tree">
+        <field name="name">medical.doctors.tree</field>
+        <field name="model">medical.doctors</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="gender"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_medical_doctors" model="ir.actions.act_window">
+        <field name="name">doctors</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.doctors</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_doctors"
+              name="Doctors"
+              parent="menu_medical_operations"
+              action="action_medical_doctors"
+              sequence="11"/>
+
+
+</odoo>
+

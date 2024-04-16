@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="branch_product_data_style_form_view" model="ir.ui.view">
+        <field name="name">branch.product.data.form</field>
+        <field name="model">branch.product.data</field>
+        <field name="arch" type="xml">
+            <form string="Branch Product">
+                <field name="name"/>
+                <field name="cost"/>
+                <field name="sale_price"/>
+                <field name="product"/>
+            </form>
+        </field>
+    </record>
+    <record id="branch_product_data_style_tree_view" model="ir.ui.view">
+        <field name="name">branch.product.data</field>
+        <field name="model">branch.product.data</field>
+        <field name="arch" type="xml">
+            <tree string="Branch Product List">
+                <field name="name"/>
+                <field name="cost"/>
+                <field name="sale_price"/>
+                <field name="product"/>
+            </tree>
+        </field>
+    </record>
+     <record id="action_branch_product_data_view" model="ir.actions.act_window">
+        <field name="name">branch.product.data</field>
+        <field name="res_model">branch.product.data</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
